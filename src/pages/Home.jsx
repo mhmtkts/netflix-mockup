@@ -1,6 +1,25 @@
+/* eslint-disable react/prop-types */
 
-export default function Home() {
+import { useEffect, useState } from "react";
+import { userSuggestionsData } from "../userSuggestion";
+import Suggestion from "../components/Suggestion/Suggestion";
+import Hero from "../components/Hero/Hero";
+
+export default function Home(props) {
+  const [suggestions, setSuggestion] = useState([]);
+  const { activeProfile } = props;
+
+  useEffect(() => {
+    const suggestionData = userSuggestionsData[activeProfile.id];
+    setSuggestion(suggestionData);
+  }, [activeProfile]);
+
   return (
-    <div>Home</div>
-  )
+    <>
+      <Hero activeProfile={activeProfile} />;
+      {suggestions.map((suggestion, index) => {
+        return <Suggestion key={index} suggestion={suggestion} />;
+      })}
+    </>
+  );
 }
