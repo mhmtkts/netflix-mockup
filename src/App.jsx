@@ -1,14 +1,14 @@
 
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import { Switch,Route } from 'react-router-dom/'
 import './App.css'
-import { Route } from 'react-router-dom/cjs/react-router-dom'
 import SignIn from './pages/SignIn'
 import Login from './pages/Login'
 import Welcome from './pages/Welcome'
 import Home from './pages/Home'
+import { useState } from 'react'
 
 function App() {
-
+  const [activeProfile, setActiveProfile] = useState(null);
 
   return (
     <>
@@ -20,10 +20,10 @@ function App() {
           <Login/>
         </Route>
         <Route exact path="/welcome">
-          <Welcome/>
+          <Welcome setActiveProfile={setActiveProfile}/>
         </Route>
         <Route exact path="/home">
-          <Home/>
+          <Home activeProfile={activeProfile}/>
         </Route>
 
 
