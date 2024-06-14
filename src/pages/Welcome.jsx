@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import Profiles from "../components/Profile/Profiles";
 import styled from "styled-components";
+
 
 const Button = styled.button`
   color: gray;
@@ -7,11 +9,13 @@ const Button = styled.button`
   border-radius: 2%;
   border: 1px solid gray
 `
-export default function Welcome() {
+export default function Welcome(props) {
+  const { setActiveProfile } = props;
   return (
     <>
+  
       <h1>Kim İzliyor?</h1>
-      <Profiles></Profiles>
+      <Profiles setActiveProfile={setActiveProfile} />
       <div >
       <Button >Profilleri Yönet</Button>
       </div>

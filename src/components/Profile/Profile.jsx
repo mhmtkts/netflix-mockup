@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -19,7 +19,6 @@ const Avatar = styled.img`
 `;
 const Name = styled.h3`
   text-align: center;
-  color: gray;
 `;
 
 export default function Profile(props) {
@@ -33,7 +32,7 @@ export default function Profile(props) {
     //set active profile
     setActiveProfile(profile);
     //history push'la
-    history.push("/Home");
+    history.push("/home");
   };
 
   return (
