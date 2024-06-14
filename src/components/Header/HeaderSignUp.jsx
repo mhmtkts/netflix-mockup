@@ -154,7 +154,7 @@ export default function HeaderSignUp() {
   function handleGetStarted(event) {
     event.preventDefault();
 
-    if (!formData.email) {
+    if (!formData.email || !validateEmail(formData.email)) {
       setErrors({ ...errors, email: true });
       return;
     }

@@ -1,11 +1,10 @@
-
-import { Switch,Route } from 'react-router-dom/'
-import './App.css'
-import SignIn from './pages/SignIn'
-import Login from './pages/Login'
-import Welcome from './pages/Welcome'
-import Home from './pages/Home'
-import { useState } from 'react'
+import { Switch, Route } from "react-router-dom/";
+import "./App.css";
+import SignIn from "./pages/SignIn";
+import Login from "./pages/Login";
+import Welcome from "./pages/Welcome";
+import Home from "./pages/Home";
+import { useState } from "react";
 
 function App() {
   const [activeProfile, setActiveProfile] = useState(null);
@@ -14,22 +13,20 @@ function App() {
     <>
       <Switch>
         <Route exact path="/">
-          <SignIn/>
+          <SignIn />
         </Route>
         <Route exact path="/login">
-          <Login/>
+          <Login />
         </Route>
         <Route exact path="/welcome">
-          <Welcome setActiveProfile={setActiveProfile}/>
+          <Welcome setActiveProfile={setActiveProfile} />
         </Route>
         <Route exact path="/home">
-          <Home activeProfile={activeProfile}/>
+          <Home activeProfile={activeProfile} />
         </Route>
-
-
       </Switch>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

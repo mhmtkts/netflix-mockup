@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 const Card = styled.div`
   width: 25%;
@@ -15,19 +14,18 @@ const Card = styled.div`
 `;
 
 const Avatar = styled.img`
-width: 100%;
-border-radius: 10%;
-`
-const Name = styled.h2`
+  width: 100%;
+  border-radius: 3%;
+`;
+const Name = styled.h3`
   text-align: center;
   color: gray;
 `;
 
 export default function Profile(props) {
-  const {profile,setActiveProfile} = props
+  const { profile, setActiveProfile } = props;
 
-
-  const {name,avatar}= profile
+  const { name, avatar } = profile;
 
   const history = useHistory();
 
@@ -40,8 +38,8 @@ export default function Profile(props) {
 
   return (
     <Card onClick={activeProfileHandler}>
-      <Avatar src={avatar}/>
+      <Avatar src={avatar} />
       <Name>{name}</Name>
     </Card>
-  )
+  );
 }
