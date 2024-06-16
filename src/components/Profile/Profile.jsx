@@ -29,9 +29,7 @@ export default function Profile(props) {
   const history = useHistory();
 
   const activeProfileHandler = () => {
-    //set active profile
     setActiveProfile(profile);
-    //history push'la
     history.push("/home");
   };
 

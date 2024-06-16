@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { userSuggestionsData } from "../userSuggestion";
 import Suggestion from "../components/Suggestion/Suggestion";
 import Hero from "../components/Hero/Hero";
+import { Helmet } from "react-helmet";
 
 export default function Home(props) {
   const [suggestions, setSuggestion] = useState([]);
@@ -16,7 +17,10 @@ export default function Home(props) {
 
   return (
     <>
-      <Hero activeProfile={activeProfile} />;
+      <Helmet>
+        <title>WitFlix</title>
+      </Helmet>
+      <Hero activeProfile={activeProfile} />
       {suggestions.map((suggestion, index) => {
         return <Suggestion key={index} suggestion={suggestion} />;
       })}

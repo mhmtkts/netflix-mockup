@@ -11,6 +11,7 @@ function App() {
 
   return (
     <>
+    
       <Switch>
         <Route exact path="/">
           <SignIn />
@@ -21,7 +22,7 @@ function App() {
         <Route exact path="/welcome">
           <Welcome setActiveProfile={setActiveProfile} />
         </Route>
-        <Route exact path="/home">
+        <Route path="/home">
           <Home activeProfile={activeProfile} />
         </Route>
       </Switch>

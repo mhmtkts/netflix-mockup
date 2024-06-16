@@ -8,7 +8,6 @@ const ProfilesContainer = styled.div`
   display: inline-flex;
   gap: 2rem;
   justify-content: center;
-  
 `;
 
 function Profiles(props) {
