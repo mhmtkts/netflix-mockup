@@ -168,7 +168,9 @@ export default function HeaderSignUp() {
       <Overlay />
       <HeaderArea>
         <Logo>WitFlix</Logo>
-        <SignIn to="/Login">Giriş Yap</SignIn>
+        <SignIn to="/Login" data-cy="route-login1">
+          Giriş Yap
+        </SignIn>
       </HeaderArea>
       <H1>Sınırsız film, dizi ve daha fazlası</H1>
       <H2>Her yerde izleyin. İstediğiniz zaman iptal edin.</H2>
@@ -182,10 +184,15 @@ export default function HeaderSignUp() {
           value={formData.email}
           onChange={handleChange}
           name="email"
+          data-cy="signup-input-email"
         />
-        <GetStarted type="submit">Başlayın</GetStarted>
+        <GetStarted type="submit" data-cy="route-login">
+          Başlayın
+        </GetStarted>
       </FormContainer>
-      {errors.email && <ErrorMessage>{errorMessages.email}</ErrorMessage>}
+      {errors.email && (
+        <ErrorMessage data-cy="errors">{errorMessages.email}</ErrorMessage>
+      )}
     </>
   );
 }
