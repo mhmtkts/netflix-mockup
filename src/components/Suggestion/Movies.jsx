@@ -16,6 +16,7 @@ const MovieImage = styled.img`
 `;
 
 const Movies = ({ movies }) => {
+   // movies dizisini döngüye alarak film kartlarını oluşturuyoruz
   return (
     <MovieList>
       {movies.map((movie) => (

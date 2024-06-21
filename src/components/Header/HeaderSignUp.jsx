@@ -184,7 +184,7 @@ export default function HeaderSignUp() {
           value={formData.email}
           onChange={handleChange}
           name="email"
-          data-cy="signup-input-email"
+          datacy-="signup-input-email"
         />
         <GetStarted type="submit" data-cy="route-login">
           Başlayın

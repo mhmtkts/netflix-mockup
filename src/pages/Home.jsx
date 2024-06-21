@@ -10,6 +10,7 @@ export default function Home(props) {
   const [suggestions, setSuggestion] = useState([]);
   const { activeProfile } = props;
 
+   // activeProfile değiştiğinde çalışacak useEffect kancasını tanımlıyoruz
   useEffect(() => {
     const suggestionData = userSuggestionsData[activeProfile.id];
     setSuggestion(suggestionData);

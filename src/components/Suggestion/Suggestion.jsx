@@ -18,6 +18,7 @@ function Suggestion(props) {
   const { suggestion } = props;
   const { title } = suggestion;
 
+  // bileşen yüklendiğinde çalışacak useEffect kancasını tanımlıyoruz
   useEffect(() => {
     const fetchMovies = async () => {
       try {
@@ -31,7 +32,7 @@ function Suggestion(props) {
             },
           }
         );
-
+          // Gelen sonuçlardan rastgele bir dilim seçiyoruz
         const random = Math.floor(
           Math.random() * (response.data.results.length - 6)
         );
