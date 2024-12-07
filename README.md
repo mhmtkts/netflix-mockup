@@ -24,13 +24,16 @@ npm install
 
 # Geliştirme sunucusunu başlatın
 npm run dev
+```
 
 ## 📦 Scripts
 
+```bash
 - `npm run dev` - Geliştirme sunucusunu başlatır
 - `npm run build` - Prodüksiyon için build alır
 - `npm run lint` - ESLint ile kod kontrolü yapar
 - `npm run preview` - Build alınmış projeyi önizler
+```
 
 ## 🔧 Yapılandırma
 
